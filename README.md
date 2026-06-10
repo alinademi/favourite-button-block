@@ -6,6 +6,8 @@ The block shows a favourite button and an optional public count. Logged-out visi
 
 Favourite state loads after the page renders, so the block works with page caching. Deleting a user updates post counts. Permanently deleting a post removes its favourites.
 
+https://github.com/user-attachments/assets/5cab4022-258f-4fdc-a068-54005d6f16da
+
 ## Requirements
 
 - WordPress 6.8 or newer
