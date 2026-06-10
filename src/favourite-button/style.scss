@@ -1,0 +1,46 @@
+.wp-block-fav-btn-favourite-button {
+
+	.fav-btn-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5em;
+		padding: 0.5em 1em;
+		border: 1px solid currentcolor;
+		border-radius: 999px;
+		background: transparent;
+		cursor: pointer;
+		font: inherit;
+		text-decoration: none;
+
+		&::before {
+			content: "♡";
+		}
+
+		&.is-favorited::before {
+			content: "♥";
+		}
+
+		&[disabled] {
+			cursor: not-allowed;
+			opacity: 0.6;
+		}
+
+		&:focus-visible {
+			outline: 3px solid currentcolor;
+			outline-offset: 3px;
+		}
+	}
+
+	.fav-btn-button[hidden] {
+		display: none;
+	}
+
+	.fav-btn-count {
+		font-variant-numeric: tabular-nums;
+	}
+
+	.fav-btn-login:focus-visible {
+		outline: 3px solid currentcolor;
+		outline-offset: 3px;
+	}
+}

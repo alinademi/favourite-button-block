@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<ruleset name="Favourite Button">
+	<description>WordPress coding standards</description>
+
+	<file>.</file>
+	<exclude-pattern>/build/</exclude-pattern>
+	<exclude-pattern>/node_modules/</exclude-pattern>
+	<exclude-pattern>/vendor/</exclude-pattern>
+
+	<arg name="basepath" value="."/>
+	<arg name="colors"/>
+	<arg name="extensions" value="php"/>
+	<arg name="parallel" value="8"/>
+
+	<config name="minimum_supported_wp_version" value="6.8"/>
+	<config name="testVersion" value="7.4-"/>
+
+	<rule ref="WordPress">
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+	</rule>
+	<rule ref="PHPCompatibilityWP"/>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<exclude-pattern>tests/bootstrap.php</exclude-pattern>
+		<exclude-pattern>tests/wp-tests-config.php</exclude-pattern>
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="fav_btn"/>
+				<element value="Fav_Btn"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.WP.GlobalVariablesOverride">
+		<exclude-pattern>tests/wp-tests-config.php</exclude-pattern>
+	</rule>
+
+	<rule ref="Squiz.Commenting">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="favourite-button"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

@@ -1,0 +1,9 @@
+.wp-block-fav-btn-favourite-button {
+
+	.fav-btn-button[disabled] {
+		// Preview shell is intentionally disabled in the editor; don't make
+		// it look broken.
+		opacity: 1;
+		cursor: default;
+	}
+}

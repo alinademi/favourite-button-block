@@ -1,0 +1,36 @@
+<?php
+// This file is generated. Do not modify it manually.
+return array(
+	'favourite-button' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'fav-btn/favourite-button',
+		'version' => '0.1.0',
+		'title' => 'Favourite Button Block',
+		'category' => 'widgets',
+		'icon' => 'heart',
+		'description' => 'Logged-in users can favourite posts.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'showCount' => array(
+				'type' => 'boolean',
+				'default' => true
+			)
+		),
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'favourite-button',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	)
+);
