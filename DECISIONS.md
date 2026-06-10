@@ -62,3 +62,17 @@ deleting a post removes its favourite rows from all users.
 - `includes/class-fav-btn-rest-controller.php`: REST routes and responses.
 - `includes/class-fav-btn-favorites-repository.php`: metadata and count
   updates.
+
+## Roadmap
+
+This sample stays focused on the main favourite workflow and was kept under
+500 lines of handwritten application code. The following features were left
+out for brevity:
+
+- An admin analytics dashboard showing the most-favourited posts.
+- Tools to inspect and rebuild stored favourite counts.
+- Filters for date range, post type, and post status.
+- Exporting favourite data for reporting.
+
+These features can be added without changing the current storage or REST
+contracts.
